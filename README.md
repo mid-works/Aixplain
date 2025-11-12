@@ -44,7 +44,7 @@ TrustAI bridges the gap between black-box AI and human understanding — enablin
 
 ## 🏗️ System Architecture
 
-```mermaid
+``` mermaid
 graph TD
     A[User / Data Scientist] -->|Uploads model & data| B[TrustAI Backend (FastAPI)]
     B --> C[Explainability Engine (SHAP / LIME)]
