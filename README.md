@@ -44,44 +44,9 @@ TrustAI bridges the gap between black-box AI and human understanding — enablin
 
 ## 🏗️ System Architecture
 
-```
-        +-------------------------------------------------------------+
-| User / Data Scientist |
-| (Uploads model & data via frontend or API) |
-+---------------------------+---------------------------------+
-|
-v
-+-------------------------------------------------------------+
-| TrustAI Backend (FastAPI) |
-| - Receives model & dataset |
-| - Manages requests to XAI and ML layers |
-+---------------------------+---------------------------------+
-|
-v v
-+--------------------+ +-------------------------+
-| Explainability | | Model Interface (PyTorch) |
-| Engine (SHAP/LIME) | | - Model execution & I/O |
-| - Computes feature | +-------------------------+
-| attributions |
-+--------------------+
-|
-v
-+-------------------------------------------------------------+
-| Interpretation Layer (Text + Visual) |
-| - Generates interpretable results (graphs, text) |
-+-------------------------------------------------------------+
-|
-v
-+-------------------------------------------------------------+
-| Dash Dashboard |
-| - Presents explanations visually |
-+-------------------------------------------------------------+
-|
-v
-+-------------------------------------------------------------+
-| User / Data Scientist (Receives explanations) |
-+-------------------------------------------------------------+
-```
+<p align="center">
+  <img src="assets/system.png" alt="System Architecture" width="700"/>
+</p>
 
 ## 🔄 Concept Flow
 ``` mermaid
