@@ -46,12 +46,13 @@ TrustAI bridges the gap between black-box AI and human understanding — enablin
 
 ``` mermaid
 graph TD
-    A[User / Data Scientist] -->|Uploads model & data| B[TrustAI Backend (FastAPI)]
+    A[User / Data Scientist] -->|"Uploads model and data"| B[TrustAI Backend (FastAPI)]
     B --> C[Explainability Engine (SHAP / LIME)]
     C --> D[Interpretation Layer (Text + Visual)]
     D --> E[Dash Dashboard]
     B --> F[Model Interface (PyTorch)]
-    E -->|Displays explanations| A
+    E -->|"Displays explanations"| A
+
 ```
 
 ## 🔄 Concept Flow
