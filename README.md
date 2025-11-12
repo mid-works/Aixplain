@@ -45,7 +45,7 @@ TrustAI bridges the gap between black-box AI and human understanding — enablin
 ## 🏗️ System Architecture
 
 <p align="center">
-  <img src="assets/system.png" alt="System Architecture" width="700"/>
+  <img src="assects/system.png" alt="System Architecture" width="700"/>
 </p>
 
 ## 🔄 Concept Flow
