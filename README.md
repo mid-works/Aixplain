@@ -69,12 +69,12 @@ sequenceDiagram
     D-->>U: Display interpretability results
 ```
 
-##🧠 Workflow Summary
+## 🧠 Workflow Summary
 
-#Input:
+# Input:
 Trained ML/DL model + test dataset
 
-#Processing:
+# Processing:
 
 Run SHAP/LIME to compute feature importance
 
@@ -82,7 +82,7 @@ Detect bias and compute trust metrics
 
 Generate human-readable text explanations
 
-#Output:
+# Output:
 
 Visual explanations (bar charts, heatmaps)
 
@@ -91,25 +91,25 @@ Text summaries of reasoning
 Bias / trust reports
 
 
-##💻 Implementation Steps
+## 💻 Implementation Steps
 
-#Model Integration:
+# Model Integration:
 Import trained PyTorch or scikit-learn model.
 
-#Backend Setup:
+# Backend Setup:
 FastAPI endpoints handle model uploads and explanation requests.
 
-#Explanation Computation:
+# Explanation Computation:
 SHAP/LIME runs locally to generate explanation data.
 
-#Frontend Dashboard:
+# Frontend Dashboard:
 Dash visualizes explanations with Plotly graphs and natural-language summaries.
 
 #API Access:
 External systems can request explanations via REST API
 
 
-##🚀 Setup & Usage
+## 🚀 Setup & Usage
 ```bash
 # Clone repository
 git clone https://github.com/yourusername/trustai.git
@@ -129,7 +129,7 @@ uvicorn backend.main:app --reload
 python dashboard/app.py
 ```
 
-##🔮 Future Enhancements
+## 🔮 Future Enhancements
 
 Integrate counterfactual explanations (“If X changed, prediction would be Y”).
 
@@ -142,7 +142,7 @@ Deploy as a containerized microservice (Docker).
 Add multilingual explanation generation using LLMs
 
 
-##📚 References
+## 📚 References
 
 Lundberg, S.M. & Lee, S.-I. “A Unified Approach to Interpreting Model Predictions (SHAP)”, NIPS 2017.
 
