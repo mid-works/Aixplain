@@ -44,15 +44,43 @@ TrustAI bridges the gap between black-box AI and human understanding — enablin
 
 ## 🏗️ System Architecture
 
-``` mermaid
-graph TD
-    A[User / Data Scientist] -->|"Uploads model and data"| B[TrustAI Backend (FastAPI)]
-    B --> C[Explainability Engine (SHAP / LIME)]
-    C --> D[Interpretation Layer (Text + Visual)]
-    D --> E[Dash Dashboard]
-    B --> F[Model Interface (PyTorch)]
-    E -->|"Displays explanations"| A
-
+```
+        +-------------------------------------------------------------+
+| User / Data Scientist |
+| (Uploads model & data via frontend or API) |
++---------------------------+---------------------------------+
+|
+v
++-------------------------------------------------------------+
+| TrustAI Backend (FastAPI) |
+| - Receives model & dataset |
+| - Manages requests to XAI and ML layers |
++---------------------------+---------------------------------+
+|
+v v
++--------------------+ +-------------------------+
+| Explainability | | Model Interface (PyTorch) |
+| Engine (SHAP/LIME) | | - Model execution & I/O |
+| - Computes feature | +-------------------------+
+| attributions |
++--------------------+
+|
+v
++-------------------------------------------------------------+
+| Interpretation Layer (Text + Visual) |
+| - Generates interpretable results (graphs, text) |
++-------------------------------------------------------------+
+|
+v
++-------------------------------------------------------------+
+| Dash Dashboard |
+| - Presents explanations visually |
++-------------------------------------------------------------+
+|
+v
++-------------------------------------------------------------+
+| User / Data Scientist (Receives explanations) |
++-------------------------------------------------------------+
 ```
 
 ## 🔄 Concept Flow
